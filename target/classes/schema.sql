@@ -19,3 +19,22 @@ CREATE TABLE IF NOT EXISTS `accounts` (
    `updated_at` date DEFAULT NULL,
     `updated_by` varchar(20) DEFAULT NULL
 );
+
+INSERT INTO customer
+(name, email, mobile_number, created_at, created_by, updated_at, updated_by)
+VALUES
+('Amit Sharma', 'amit.sharma@gmail.com', '9876543210', CURRENT_DATE, 'SYSTEM', NULL, NULL),
+
+('Priya Verma', 'priya.verma@gmail.com', '9123456780', CURRENT_DATE, 'SYSTEM', NULL, NULL),
+
+('Rahul Singh', 'rahul.singh@gmail.com', '9988776655', CURRENT_DATE, 'SYSTEM', NULL, NULL);
+
+
+INSERT INTO accounts
+(customer_id, account_type, branch_address, created_at, created_by, updated_at, updated_by)
+VALUES
+(1, 'SAVINGS', 'Bangalore Main Branch', CURRENT_DATE, 'SYSTEM', NULL, NULL),
+
+(2, 'CURRENT', 'Mumbai Andheri Branch', CURRENT_DATE, 'SYSTEM', NULL, NULL),
+
+(3, 'SAVINGS', 'Delhi Connaught Place Branch', CURRENT_DATE, 'SYSTEM', NULL, NULL);
