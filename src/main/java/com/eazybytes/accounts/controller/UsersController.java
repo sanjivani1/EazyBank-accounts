@@ -20,10 +20,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 @Tag(
         name = "CRUD REST APIs for Users in EazyBank",
@@ -57,10 +54,15 @@ public class UsersController {
     }
     )
     @PostMapping("/registerUser")
-    public ResponseEntity<UsersDto> registerUser(@Valid @RequestBody UsersDto usersDto){
+    public ResponseEntity<UsersDto> registerUser(@RequestBody UsersDto usersDto){
         UsersDto usersDto1 = userDetailService.registerUser(usersDto);
         return ResponseEntity
                 .status(HttpStatus.CREATED)
                 .body(usersDto1);
+    }
+
+    @PostMapping("/login")
+    public String login(@RequestBody UsersDto usersDto){
+        return "token = "+userDetailService.verify(usersDto);
     }
 }

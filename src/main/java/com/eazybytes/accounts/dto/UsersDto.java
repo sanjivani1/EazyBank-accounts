@@ -19,6 +19,11 @@ public class UsersDto {
     @Schema(
             description = "username of Eazy Bank Users", example = "sanjivani"
     )
+    Long id;
+    @NotEmpty(message = "username can not be a null or empty")
+    @Schema(
+            description = "username of Eazy Bank Users", example = "sanjivani"
+    )
     private String username;
     @NotEmpty(message = "password can not be a null or empty")
     @Schema(
