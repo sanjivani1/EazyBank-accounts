@@ -1,0 +1,7 @@
+/target/classes/com/eazybytes/accounts/entity/Accounts.class
+# Maven
+target/
+
+# IntelliJ
+.idea/
+*.iml
