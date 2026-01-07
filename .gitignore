@@ -1,4 +1,9 @@
 
+/target/test-classes/com/eazybytes/accounts/repository/AccountsRepositoryTest.class
+**/target/**
+.gitignore
+=======
+
 # ignore Maven build output in any module
 **/target/
 
