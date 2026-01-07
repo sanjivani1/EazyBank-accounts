@@ -1,4 +1,9 @@
-/target/classes/com/eazybytes/accounts/entity/Accounts.class
+
+# ignore Maven build output in any module
+**/target/
+
+# ignore compiled classes
+*.class
 # Maven
 target/
 
