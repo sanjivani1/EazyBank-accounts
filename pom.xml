@@ -12,6 +12,7 @@
     <artifactId>accounts</artifactId>
     <version>0.0.1-SNAPSHOT</version>
     <name>accounts</name>
+    <packaging>jar</packaging>
     <description>Microservice for Accounts</description>
     <url/>
     <licenses>
@@ -27,7 +28,7 @@
         <url/>
     </scm>
     <properties>
-        <java.version>21</java.version>
+        <java.version>17</java.version>
     </properties>
     <dependencies>
         <dependency>
